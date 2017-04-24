@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    border: 0px;
+    outline: .1px dotted green;
+}
+
+.container{
+    margin: 10px;
+    width: 900px;
+    height: 1000px;
+}
+
+.container h1{
+    width: auto;
+    display: block;
+    background-color:blue;
+    color: white;
+}
+#title{
+    padding-left: 15px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.internet{
+font-size: 36px;
+}
+
+#net{
+    color: blue;
+}
+.internet img{
+    position: relative;
+    top: 20px;
+    width: 85px;
+    height: 85px;
+}
+
+#net{
+    color: #0761A3
+}
+
+.side-bar{
+    padding-left: 5px;
+    width: 200px;
+    height: 300px;
+}
+.side-bar p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.buttons{
+    width: auto;
+
+}
+
+.side-bar img{
+
+}
+#background{
+    width: 300px;
+    height: 300px;
+}

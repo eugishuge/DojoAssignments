@@ -1,0 +1,228 @@
+*{
+    margin: 0px;
+    border: 0px;
+    outline: .1px dotted green;
+}
+
+.wrapper{
+    background-color: #194D74;
+    width: 1000px;
+    margin-left: 10px;
+}
+
+.top{
+    display: flex;
+    right: 20px;
+    margin-top: 10px;
+}
+#search{
+    height: 10px;
+    display: inline-block;
+    position: relative;
+    left: 200px;
+}
+
+#go{
+    display: inline-block;
+    position: relative;
+    left: 200px;
+}
+
+.textsize{
+    padding-top: 10px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    text-align: right;
+    position: relative;
+    right: 10px;
+}
+.textsize p{
+    display: inline-block;
+}
+.textsize a{
+    color: yellow;
+}
+
+.searchbar {
+    margin-left: 5px;
+    height: 25px;
+    width: 200px;
+    position: relative;
+    left: 350px;
+    padding: 15px 30px;
+    background: #444444;
+    border-radius: 10px;
+    box-shadow: rgb(13, 30, 41) 3px 3px 3px;
+}
+.searchbar img{
+    margin-left: 10px;
+}
+#go{
+    vertical-align: top;
+    position: relative;
+    left: -1px;
+}
+#image{
+    padding: 10px;
+    height: 100px;
+}
+
+.MenuBar{
+    width: 800px;
+    position: relative;
+    left: 100px;
+    background: #397BB0;
+    padding: 12px;
+    margin: 20px 15px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: rgb(13, 30, 41) 3px 3px 3px;
+
+}
+.MenuBar li{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    display: inline;
+    margin: 15px 5px;
+}
+.MenuBar a{
+    margin: 0px 15px;
+    text-decoration: none;
+    text-align: center;
+}
+.Main-Content{
+    margin: 5px;
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+    text-align: center;
+    width: 825px;
+    position: relative;
+    left: 85px;
+}
+.Side-Bar{
+    text-align: center;
+    width: 1000px;
+    text-decoration: none;
+}
+.Side-Bar li{
+    font-family: sans-serif;
+    padding: 5px;
+    color: white;
+    text-decoration: underline;
+}
+.Side-Bar p{
+    font-family: sans-serif;
+    color: white;
+}
+.words{
+    font-style: italic;
+    padding:5px 0px;
+    font-family: sans-serif;
+    color: yellow;
+    margin: 10px;
+
+}
+#white{
+    color: white;
+}
+#paragraph{
+    padding: 10px;
+    font-family: sans-serif;
+}
+.words p{
+    margin: 10px;
+}
+.wrapperwhite{
+    display: flex;
+    height: 200px;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+    background-color: white;
+}
+.left{
+    display: inline-block;
+    margin-left: 180px;
+    margin-right: 80px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}
+#header1{
+    margin-top: 5px;
+    font-size: 20px;
+}
+#Guides{
+    text-align: center;
+    font-size: 13px;
+}
+#guides a{
+    text-decoration-color: lightblue;
+}
+
+.right{
+    display: inline-block;
+    margin-right: 110px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    left: 50px;
+}
+#header2{
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+#Guides1{
+    text-align: center;
+    font-size: 13px;
+}
+#line{
+    position: relative;
+    right: 50px;
+    width: 400px;
+}
+
+#line1{
+    position: relative;
+    right: 30px;
+    width: 400px;
+}
+.body{
+    height: 90px;
+    font-size: 13px;
+    padding-top: 5px;
+}
+.footer{
+    background-color: #3C7BAA;
+    width: 1000px;
+    height:70px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+.footer ul{
+    text-align: center;
+    display: flex;
+    left: 75px;
+    padding-top: 10px;
+    position: relative;
+    left: 200px;
+}
+.footer li{
+    list-style-type: none;
+    padding: 15px;
+    color: lightblue;
+}
+
+.footer p{
+    color: lightblue;
+    text-align: center;
+    font-size: 10px;
+}
