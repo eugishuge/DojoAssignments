@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQUERY</title>
+        <link rel="stylesheet" href="JQueryCSS.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+
+        <script>
+        $(document).ready(function(){
+
+            $("#hide").click(function(){
+                $(".block-hide p").hide("fast");
+            });
+            $("#show").click(function(){
+                $(".block-hide p").show("slow");
+            });
+
+            $("#toggle").click(function(){
+                $(".block-toggle p").toggle();
+            });
+
+            $("#slide2").click(function(){
+                $(".slide-up img").slideUp("slow");
+            });
+            $("#slide1").click(function(){
+                $(".slide-up img").slideDown("slow");
+            });
+
+            $("#slidetoggle").click(function(){
+                $(".slide-toggle img").slideToggle("fast");
+            });
+
+            $("#fadeout").click(function(){
+                $(".fade-out p").fadeOut("slow");
+            });
+            $("#fadein").click(function(){
+                $(".fade-out p").fadeIn("slow");
+            });
+
+            $("#addclass").click(function(){
+                $(".addclass p").addClass("green");
+            });
+
+            $("#before").click(function(){
+                $(".before p").before("This is new text BEFORE the selected tag. In this case, the first p tag in this div. It will create text on a new line");
+            });
+
+            $("#after").click(function(){
+                $(".after p").after("This is new text AFTER the selected tag. Adds a new line of text after the selected tag");
+            });
+
+            $("#append").click(function(){
+                $(".append p").append("SEE? After like this");
+            });
+
+            $("#prepend").click(function(){
+                $('.prepend').prepend("SEE? Before, like this");
+            });
+
+            $("#html").click(function(){
+                $('.html1 p').html("This <b>changes</b> the previous designated paragraph into what is written here. You can add styling here, as the 'changes' was made bold.");
+            });
+
+            $("#attr").click(function(){
+                $(".attribute img").attr('width', "500px", "height", "1000px");
+                $(".attribute img").attr('height', "50px");
+            })
+            $("#value").click(function(){
+                $(".value input:text").val("EUGENE MOTHAFUCKIN KIM");
+            });
+            $("#text").click(function(){
+                $(".text1 p").text("This inputs these changes <b>verbatim</b>. JQuery Text wont recognize HTML tags.");
+            });
+            $("#datatransfer").click(function(){
+                $("div").data("Hobby", "I like camping");
+            });
+            $("#dataaccept").click(function(){
+                alert($("div").data("Hobby"));
+            });
+
+        });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="click">
+                <h1>.click</h1>
+                <div class="block1">
+                    <button type="button">Click</button>
+                    <p>Click is an event.</p>
+                </div>
+            </div>
+
+            <div class="hide-show">
+                <h1>Hide / Show</h1>
+                <div class="block-hide">
+                    <button id = "hide" type="button">Hide</button>
+                    <p>.hide will hide the items in this class</p>
+                </div>
+
+                <div class="block-show">
+                    <button id = "show" type="button">show</button>
+                    <p>.show will show or unhide the items in this class</p>
+                </div>
+            </div>
+
+            <div class="toggle">
+                <h1>.toggle</h1>
+                <div class="block-toggle">
+                    <button id = "toggle" type="button">Toggle</button>
+                    <p>toggle will hide and unhide items with a designated speed that you give it, like "slow" or "fast". Also, you dont need a second button or JQuery code to unhide the toggle.</p>
+                </div>
+            </div>
+
+            <div class="slideDown-slideUp">
+                <h1>slideUp / slideDown</h1>
+                <div class="slide-up">
+                    <button id = "slide2" type="button">Slide Up</button>
+                    <p>Slide up will hide images using a sliding motion. You can designate the speed of the slide within the slideUp parameter. eg: .slideUp("slow")</p>
+                    <img src="The-Snatch-Feature.jpg" alt="CFSnatch">
+                </div>
+                <div class="slide-down">
+                    <button id = "slide1" type="button">Slide Down</button>
+                    <p>Slide Down with unhide images that you've slid up</p>
+                </div>
+            </div>
+
+                <div class="slide-toggle">
+                    <h1>slideToggle</h1>
+                    <div class="slidetoggle">
+                        <button id = "slidetoggle" type="button">slideToggle</button>
+                        <p>toggle will hide and unhide items with a designated speed that you give it, like "slow" or "fast". Slide Toggle uses only one button, unlike the Toggle Feature</p>
+                        <img src="golfimage.jpeg" alt="golf">
+                    </div>
+                </div>
+
+                <div class="fadeIn-fadeOut">
+                    <h1>FadeIn / FadeOut</h1>
+                    <div class="fade-out">
+                        <button id = "fadeout" type="button">Fade Out</button>
+                        <p>Fade out will fade the element youve selected</p>
+                    </div>
+
+                    <div class="fade-in">
+                        <button id = "fadein" type="button">Fade In</button>
+                        <p>fade in will fade the faded out image back in</p>
+                    </div>
+                </div>
+
+                <div class="add-class">
+                    <h1>Add Class</h1>
+                    <div class="addclass">
+                        <button id = "addclass" type="button">Add Class</button>
+                        <p>Adding a class will add a class that you've designated to style or color. In this case, the paragraph tag was changed to green and underlined.</p>
+                    </div>
+                </div>
+
+                <div class="before-after-append-prepend">
+                    <h1>Before / After / Append / Prepend</h1>
+                    <div class="before">
+                        <button id = "before" type="button">Before</button>
+                        <p>Before will add text or an attribute before the selected tag</p>
+                    </div>
+
+                    <div class="after">
+                        <button id = "after" type="button">After</button>
+                        <p>After will add text or an attribue after the selected tag </p>
+                    </div>
+
+                    <div class="append">
+                        <button id = "append" type="button">Append</button>
+                        <p>Append will add language within the selected element, but after the text or attribute found in that element</p>
+                    </div>
+
+                    <div class="prepend">
+                        <button id = "prepend" type="button">Prepend</button>
+                        <p>Prepend will add language within the selected element, but before the text or attribute found in that element</p>
+                    </div>
+                </div>
+
+                <div class="html">
+                    <h1>HTML</h1>
+                    <div class="html1">
+                        <button id = "html" type="button">HTML</button>
+                        <p>HTML lets you create new HTML code within JQuery. It's different from .text because it is interactive, whereas text will return exactly what was written.</p>
+                    </div>
+                </div>
+
+                <div class="attr">
+                    <h1>Attribute</h1>
+                    <div class="attribute">
+                        <button id = "attr" type="button">Attribue</button>
+                        <p>JQuery attribute allows you to change the CSS attributes to a tag. In this example, the picture width changed.</p>
+                        <img src="burrito.jpeg" alt="burrito">
+                    </div>
+                </div>
+
+                <div class="val">
+                    <h1>Value</h1>
+                    <div class="value">
+                        <button id = "value" type="button">Value</button>
+                        <p>Value changes whats in an input: <input type="text" name="this changes" value="Eugene Kim"></p>
+                    </div>
+                </div>
+
+                <div class="text">
+                    <h1>Text</h1>
+                    <div class="text1">
+                        <button id = "text" type="button">Text</button>
+                        <p>Text inserts verbatim what is written in the parameters section. Unlike HTML, it cannot act on html tags written in here</p>
+                    </div>
+                </div>
+
+                <div class="data">
+                    <h1>Data</h1>
+                    <div class="data1">
+                        <p>Data Jquery transfers information when you click one button, to another location in the HTML. You set what the message says within the parameters of the transferring button.</p>
+                        <button id=datatransfer type="button"> Data Transfer </button>
+                        <button id=dataaccept type="button"> Data Accept </button>
+                    </div>
+                </div>
+
+        </div>
+
+    </body>
+</html>

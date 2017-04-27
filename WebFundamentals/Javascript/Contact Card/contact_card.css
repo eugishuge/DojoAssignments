@@ -1,0 +1,9 @@
+*{
+    margin: 0px;
+    border: 0px;
+    outline: .1px dotted solid;
+}
+#description{
+    border: 1px solid black;
+    h: 10px;
+}

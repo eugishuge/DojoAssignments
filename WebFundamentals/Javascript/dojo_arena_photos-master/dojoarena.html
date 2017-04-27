@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>dojoarena</title>
+        <link rel="stylesheet" href="dojoarena.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+<script>
+    $("document").ready(function(){
+
+    $("#beach").hover(function(){
+
+        $("#beachpic").fadeIn("slow");
+    }, function(){
+      $("#beachpic").hide();
+  });
+
+  $("#earth").hover(function(){
+
+      $("#earthpic").fadeIn("slow");
+  }, function(){
+    $("#earthpic").hide();
+});
+
+$("#dojo").hover(function(){
+
+    $("#dojopic").fadeIn("slow");
+}, function(){
+  $("#dojopic").hide();
+});
+
+$("#forest").hover(function(){
+
+    $("#forestpic").fadeIn("slow");
+}, function(){
+  $("#forestpic").hide();
+});
+
+$("#matrix").hover(function(){
+
+    $("#matrixpic").fadeIn("slow");
+}, function(){
+  $("#matrixpic").hide();
+});
+
+$("#snow").hover(function(){
+
+    $("#snowpic").fadeIn("slow");
+}, function(){
+  $("#snowpic").hide();
+});
+
+
+    })
+</script>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="arenas">
+                <h4 id="header">Select Arena</h4>
+                <div class="arenalist">
+
+                    <button type="button" id="beach" name="beach"><a href="select-player.html"> beach </a></button>
+                    <button type="button" id="earth" name="earth">earth</button>
+                    <button type="button" id="dojo" name="dojo">dojo</button>
+                    <button type="button" id="forest" name="forest">forest</button>
+                    <button type="button" id="matrix" name="matrix">matrix</button>
+                    <button type="button" id="snow" name="snow">snow</button>
+                </div>
+            </div>
+
+
+                <div class="bgimages">
+                    <img id="beachpic" src="beach.jpg"/>
+                    <img id="earthpic" src="earth.jpg"/>
+                    <img id="dojopic" src="dojo.jpg"/>
+                    <img id="forestpic" src="forest.jpg"/>
+                    <img id="matrixpic" src="matrix.jpg"/>
+                    <img id="snowpic" src="snow.jpg"/>
+                </div>
+    </div>
+    </body>
+</html>

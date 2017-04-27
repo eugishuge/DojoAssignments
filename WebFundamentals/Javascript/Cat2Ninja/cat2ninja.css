@@ -1,0 +1,14 @@
+*{
+    margin:0px;
+    border: 0px;
+    outline: .1px solid black;
+}
+.container{
+    margin: 10px;
+    width: 25px;
+
+
+}.cat{
+    padding-left: 50px;
+    width: 50px;
+}

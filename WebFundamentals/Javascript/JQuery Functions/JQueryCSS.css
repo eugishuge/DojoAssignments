@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    border: 0px;
+    outline: px dotted green;
+}
+
+.container{
+    margin: auto;
+    width: 60%;;
+    height: auto;
+    text-align: center;
+}
+.click{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+#clickbutton{
+
+}
+.block1{
+
+}
+.hide-show{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+#hidebutton{
+
+}
+.toggle{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.slideDown-slideUp{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.slide-toggle{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+.fadeIn-fadeOut{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.add-class{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+.green{
+    color: green;
+    text-decoration: underline;
+}
+
+.before-after-append-prepend{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.html{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+.attr{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.val{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+.text{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+.data{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 1000px
+    display: inline-grid;
+    position:relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}

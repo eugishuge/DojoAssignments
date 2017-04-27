@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    border: 0px;
+    outline: px dotted green;
+}
+.container{
+    margin:200px;
+    margin-top: 50px;
+    width: 600px;
+    height: auto;
+}
+
+.images{
+width: 1000px;
+
+
+}
+.images img{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    position: flex;
+    justify-content: center;
+}
+
+#restore{
+    margin-top: 25px;
+    border-radius: 5px;
+    color: green;
+}
