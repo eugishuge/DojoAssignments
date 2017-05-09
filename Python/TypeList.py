@@ -81,3 +81,5 @@ for ele in list3:
         else:
             print "your array is of", type(ele), "type"
 print string
+
+# Now that you know more about python functions, can you write one function that could check all 3 lists?
