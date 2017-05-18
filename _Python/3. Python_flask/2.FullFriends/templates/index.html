@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+.table, th, td{
+    text-align: center;
+    border:1px solid black;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+        </style>
+    </head>
+
+    <body>
+        <h3>Friends:</h3>
+
+            <table class=table>
+                <tr class=header>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Friend Since</th>
+                </tr>
+                {%for x in friends%}
+                <tr class="rows">
+                    <td>{{x['first_name']}}</td> <td>{{x['last_name']}}</td>
+                    <td>{{x['age']}}</td>
+                    <td>{{x['created_at']}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+
+        <div class="fname">
+            <form action='/friends' method='post'>
+               <p><label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label></p>
+        </div>
+        <div class="lname">
+            <p><label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label></p>
+        </div>
+
+        <div class="age">
+            <p><label for="age">Age:   <input type="text" name="age" id="age"></label></p>
+            <p><input type="submit" value="Add"></p>
+        </div>
+
+         </form>
+    </body>
+</html>

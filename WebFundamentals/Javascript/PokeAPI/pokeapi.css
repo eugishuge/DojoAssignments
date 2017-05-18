@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    outline: .1px solid black;
+
+}
+.container{
+    margin: 5px;
+    width: 1200px;
+    height: auto;
+}

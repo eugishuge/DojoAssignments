@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Friends</title>
+</head>
+<body>
+
+  <h1>These are all my friends!</h1>
+
+  {%for friends in friends%}
+  <p>ID: {{friends['id']}}</p>
+  <p>First Name: {{friends['first_name']}} </p>
+  <p>Last Name: {{friends['last_name']}}</p>
+  <p>Occupation: {{friends['occupation']}}</p>
+  <hr>
+  {%endfor%}
+  <!-- <p>First Name: Jimmy</p>
+  <p>Last Name: Jun</p>
+  <p>Occupation: Instructor</p>
+  <hr>
+  <h2>Add a Friend</h2> -->
+{%for x in one_friend%}
+<p>{{x['first_name']}}</p>
+{%endfor%}
+  <form action='/friends' method='POST'>
+
+    <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+    <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+    <label for="age">Occupation:<input type="text" name="age" id=""></label>
+    <input type="submit" value="Add">
+
+  </form>
+</body>
+</html>
