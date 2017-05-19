@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Login and Registration</title>
+    <style media="screen">
+        h3 {
+            text-decoration: underline;
+        }
+        .container{
+            width: 500px;
+            height: auto;
+            margin: 10px;
+            padding: 15px;
+        }
+        .register{
+            padding: 15px;
+            border: 1px solid black;
+            background-color:#FBFFAF
+        }
+        .login{
+            width: 500px;
+            display: block;
+            padding-left: auto;
+            padding-right: auto
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+            <span style="color: red;"><p>{{message}}</p></span>
+            {% endfor %} {% endif %} {% endwith %}
+
+                <h3>Log In:</h3>
+
+                <form action='/login' method='post'>
+                    <p>Username: <input type="text" name="username"></p>
+                    <p>Password: <input type="password" name="password"></p>
+                    <p><input type="submit" value="Login"></p>
+                </form>
+        </div>
+
+        <div class="register">
+                <h3>New User? Register Here</h3>
+                <form action='/create_user' method='post'>
+                        First Name: <p><input type="text" name="fname" size = '50'></p>
+                        Last Name: <p><input type="text" name="lname" size = '50'></p>
+                        Email: <p><input type="email" name="email" size = '50'></p>
+                        UserName: <p><input type="text" name="new_user" size = '50'></p>
+                        Password: <p><input type="password" name="new_pw" size = '50'></p>
+                        Confirm Password: <p><input type="password" name="confirm_pw" size = '50'></p>
+
+                    <p><input type="submit" value="Register"></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

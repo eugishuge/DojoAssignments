@@ -13,7 +13,7 @@ def index():
 
 @app.route('/friends', methods =['post'])
 def friends():
-    query ="INSERT INTO friends(first_name, last_name,age,created_at, updated_at) VALUES(:first_name,:last_name,:age,NOW(),NOW())"
+    query ="INSERT INTO friends(first_name, last_name,age,DATE_FORMAT(created_at, '%m/%d/%y')AS created_at,DATE_FORMAT(updated_at, '%m/%d/%y') AS updated_at) VALUES(:first_name,:last_name,:age,NOW(),NOW())"
 
     data={
         "first_name": request.form['first_name'],
