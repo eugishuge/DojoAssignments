@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Random Word</title>
+        <style media="screen">
+            *{
+                text-align: center;
+                font: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+<h1> Random Word - Attempt #{{request.session.count}}</h1>
+
+
+<form action="/random_word" method="POST">
+    {%csrf_token%}
+    {{random}}
+    <p><input type="submit" name="submit" value="Generate"></p>
+</form>
+
+<form action="/clear" method="POST">
+    {%csrf_token%}
+    <p><input type="submit" name="submit" value="Clear Counter"></p>
+</form>
+
+    </body>
+</html>

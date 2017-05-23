@@ -17,22 +17,26 @@ def index():
 
 @app.route('/login', methods =['post'])
 def login():
-    query_name = "SELECT username, password FROM users"
-    user = mysql.query_db(query_name)
-    username = request.form['username']
+    if len(request.form['username']) <1 or len(request.form['password'])<1:
+        flash("You must enter valid username & password")
+        return redirect ('/')
 
-    query_pw = "SELECT password FROM users"
-    pw = mysql.query_db(query_pw)
-    password = md5.new(request.form['password']).hexdigest()
-
-
-    if ({'username':username} not in user) and ({'password': pw} not in pw):
-        flash("Please Enter correct log-in")
     else:
-        return render_template('success.html')
-
-    return redirect ('/')    
-
+        query = "SELECT * from users WHERE username= :username"
+        data = {
+        'username': request.form['username']
+        }
+        user = mysql.query_db(query, data)
+        if user:
+            if user[0]['password'] == md5.new(request.form['password']).hexdigest():
+                session['user_id'] = user[0]['id']
+                return redirect ('/success')
+            else:
+                flash('Your password in invalid')
+                return redirect ('/')
+        else:
+            flash("your email is invalid")
+            return redirect ('/')
 
 @app.route('/create_user', methods = ['post'])
 def create():
@@ -85,7 +89,8 @@ def create():
 
         query_data = {'first_name': first_name, 'last_name': last_name, 'email': email, 'username': username, 'password': password }
 
-        mysql.query_db(insert_query, query_data)
+        session['user_id'] = mysql.query_db(insert_query, query_data)
+        return redirect ('/success')
 
     else:
         flash("Please enter all required information")
@@ -96,8 +101,16 @@ def create():
 @app.route('/success')
 def success():
     #if all requirements are successfully met, then redirect to success page
+    try:
+        query = "SELECT * from users WHERE id=:user_id"
+        data = {
+            'user_id' : session['user_id']
+        }
+        logged_in_user = mysql.query_db(query,data)
 
+        return render_template('success.html', logged_in_user = logged_in_user)
 
-    return render_template('success.html')
-
+    except:
+        return redirect ('/')
+        
 app.run(debug=True)
