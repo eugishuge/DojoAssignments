@@ -101,7 +101,7 @@ def create():
 @app.route('/wall')
 def wall():
     #if all requirements are successfully met, then redirect to success page
-    try:
+
         query = "SELECT * from users WHERE id=:user_id"
         data = {
             'user_id' : session['user_id']

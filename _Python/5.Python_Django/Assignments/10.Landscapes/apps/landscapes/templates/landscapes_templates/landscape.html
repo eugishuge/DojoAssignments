@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+    {%load staticfiles%}
+
+    {% if id > 0 and id <= 10 %}
+    <img src="{% static 'landscapes/images/snowscape.jpeg' %}" alt="">
+
+    {% elif id > 10 and id <= 20 %}
+    <img src="{% static 'landscapes/images/desertscape.jpeg' %}" alt="">
+
+    {% elif id > 20 and id <= 30 %}
+    <img src="{% static 'landscapes/images/forestscape.jpg'%}" alt="">
+
+    {% elif id > 30 and id <= 40 %}
+    <img src="{% static 'landscapes/images/vineyard.jpeg'%}" alt="">
+
+    {% elif id > 40 and id <= 50 %}
+    <img src="{% static 'landscapes/images/tropical.jpg'%}" alt="">
+    
+    {%endif%}
+
+</html>
