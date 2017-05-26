@@ -39,73 +39,73 @@ def login():
                 return redirect ('/')
 
 
-# @app.route('/register', methods = ['post'])
-# def register_user():
-#
-#     flag = True #will remain true if no errors are detected
-#     if (request.form['fname']) <1:
-#         flag = False
-#         flash("Please enter a valid First Name")
-#     if (request.form['lname']) <1:
-#         flag = False
-#         flash("Please enter a valid Last Name")
-#     if (request.form['fname']) <3:
-#         flag = False
-#         flash("First Name must be longer thatn 2 character")
-#     if (request.form['lname']) <3:
-#         flag = False
-#         flash"Last Name must be longer thann 2 character")
-#
-#     if not (request.form['fname']).isalpha() and not (request.form['lname']).isalpha():
-#         flag = False
-#         flash("Name must be all letters")
-#
-#     if not email_regex.match(request.form['email']):
-#         flag = False
-#         flash('your email is not valid')
-#
-#     if leng(request.form['new_pw']) < 8:
-#         flag = False
-#         flash('pw msut be 8 charactes ong')
-#
-#     if request.form['new_pw']!= request.form['confirm_pw']
-#         flag = False
-#         flash('your pws dont match')
-#
-#     if flag:
-#         print 'user info is good'
-#         query = "INSERT INTO users(first_name, last_name, email, new_pw, created_at, updated_at) VALUES (:first_name, :last_name, :email, :new_pw, NOW(), NOW())"
-#
-#         data = {
-#         'first_name' = request.form['first_name']
-#         'last_name' = request.form['last_name']
-#         'email' = request.form['email']
-#         'password' = md5.new(request.form['password']).hexigest()
-#         }
-#         request.session['user_id'] = mysql.query_db(query,data)
-#         #store in session, logged-in user's id
-#         return redirect('/success')
-#     else:
-#         print 'please enter all valid information'
-#         return redirect ('')
-#
-# @app.route('/success')
-# def success():
-#     try:
-#         query = SELECT * from users where id = :user_id
-#
-#         data = {
-#             'user_id': session['user_id']
-#         }
-#
-#             logged_in_user = mysql.query_db(query, data)
-#             return render_template('success.html', logged_in_user = (logged_in_user))
-#     except:
-#         return redirect ('/')
-#
-#
-#
-#
+@app.route('/register', methods = ['post'])
+def register_user():
+
+    flag = True #will remain true if no errors are detected
+    if (request.form['fname']) <1:
+        flag = False
+        flash("Please enter a valid First Name")
+    if (request.form['lname']) <1:
+        flag = False
+        flash("Please enter a valid Last Name")
+    if (request.form['fname']) <3:
+        flag = False
+        flash("First Name must be longer thatn 2 character")
+    if (request.form['lname']) <3:
+        flag = False
+        flash"Last Name must be longer thann 2 character")
+
+    if not (request.form['fname']).isalpha() and not (request.form['lname']).isalpha():
+        flag = False
+        flash("Name must be all letters")
+
+    if not email_regex.match(request.form['email']):
+        flag = False
+        flash('your email is not valid')
+
+    if leng(request.form['new_pw']) < 8:
+        flag = False
+        flash('pw msut be 8 charactes ong')
+
+    if request.form['new_pw']!= request.form['confirm_pw']
+        flag = False
+        flash('your pws dont match')
+
+    if flag:
+        print 'user info is good'
+        query = "INSERT INTO users(first_name, last_name, email, new_pw, created_at, updated_at) VALUES (:first_name, :last_name, :email, :new_pw, NOW(), NOW())"
+
+        data = {
+        'first_name' = request.form['first_name']
+        'last_name' = request.form['last_name']
+        'email' = request.form['email']
+        'password' = md5.new(request.form['password']).hexigest()
+        }
+        request.session['user_id'] = mysql.query_db(query,data)
+        #store in session, logged-in user's id
+        return redirect('/success')
+    else:
+        print 'please enter all valid information'
+        return redirect ('')
+
+@app.route('/success')
+def success():
+    try:
+        query = SELECT * from users where id = :user_id
+
+        data = {
+            'user_id': session['user_id']
+        }
+
+            logged_in_user = mysql.query_db(query, data)
+            return render_template('success.html', logged_in_user = (logged_in_user))
+    except:
+        return redirect ('/')
+
+
+
+
 # #EUGENES CODE STARTS HERE
 # # @app.route('/login', methods =['post'])
 # # def login():

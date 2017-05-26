@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+<h1>SUCCESSFUL LOGIN</h1>
+    <h4>Welcome</h4>
+    {%for x in logged_in%}
+    <p>{{x.first_name}} {{x.last_name}} !</p>
+    {%endfor%}
+    </body>
+</html>
