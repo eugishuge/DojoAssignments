@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+
+    <h1>Roster Information</h1>
+
+    <table>
+        <tr>
+            <th>Player Name</th>
+        </tr>
+
+        {%for x in roster%}
+        <tr>
+            <td><a href="/jointeam2/user_info/{{x.all_users.id}}">{{x.all_users.id}} {{x.all_users.name}}</a></td>
+        {%endfor%}
+            <td>
+                <form action="/jointeam2/remove/{{x.all_users.id}}" method="post">
+                    {%csrf_token%}
+
+                    <input type="submit" name="submit" value="Remove">
+                </form>
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    <form action="/jointeam2/logout" method="post">
+        {%csrf_token%}
+        <input type="submit" name="submit" value="Log Out">
+    </form>
+
+    <hr>
+
+    <form action="/jointeam2/go_back" method="post">
+        {%csrf_token%}
+        <input type="submit" name="submit" value="Go Back">
+    </form>
+
+    <h2>Total Players</h2> {{count}}
+</body>
+
+</html>

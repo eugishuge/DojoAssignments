@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        {%if messages%}
+        {%for x in messages%}
+        <p>{{x}}</p>
+        {%endfor%}
+        {%endif%}
+
+
+        <h1>Add a new Trip</h1>
+<form class="" action="/blackbelt/add" method="post">
+    {%csrf_token%}
+<p>Destination: <input type="text" name="destination" value=""></p>
+<p>Plan Description: <input type="TextField" name="plan" value=""></p>
+<p>Start Date: <input type="Date" name="start_date" value=""></p>
+<p>End Date: <input type="Date" name="end_date" value=""></p>
+
+<p><input type="submit" name="submit" value="Add Travel"></p>
+</form>
+    </body>
+</html>

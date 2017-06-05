@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        {%if messages%}
+        {%for x in messages%}
+        <p>{{x}}</p>
+        {%endfor%}
+        {%endif%}
+
+<h1>Welcome {{request.session.user}}!</h1>
+
+<h2>Teams You've Joined</h2>
+
+<form action="/jointeam2/team_info" method="post">
+    {%csrf_token%}
+    <select name="view_info">
+        {%for x in user_teams%}
+        <option value="{{x.all_teams.team_name}}">{{x.all_teams.team_name}}</option>
+        {%endfor%}
+    </select>
+        <input type="submit" name="submit" value="View Roster">
+</form>
+<hr>
+<hr>
+
+<h2>Join Another Team!</h2>
+<form action="/jointeam2/join_team" method="post">
+    {%csrf_token%}
+
+    <select name="join_team">
+    {%for x in remove%}
+    <option value="{{x.id}}">{{x.team_name}}</option>
+    {%endfor%}
+    <input type="submit" name="submit" value="Join"> </p>
+    </select>
+</form>
+<!--
+<h4>all Teams and their IDs</h4>
+{%for x in team%}
+<p>{{x.id}} {{x.team_name}}</p>
+{%endfor%}
+<h4>All users and their IDs</h4>
+{%for x in all_users%}
+<p>{{x.id}} {{x.name}}</p>
+{%endfor%}
+<hr>
+<hr> -->
+
+    <h2>Create New Team!</h2>
+<form action="/jointeam2/go_create" method="post">
+    {%csrf_token%}
+    <input type="submit" name="submit" value="Create">
+</form>
+
+<hr>
+
+<form action="/jointeam2/logout" method="post">
+    {%csrf_token%}
+    <input type="submit" name="submit" value="Log Out">
+</form>
+    </body>
+</html>

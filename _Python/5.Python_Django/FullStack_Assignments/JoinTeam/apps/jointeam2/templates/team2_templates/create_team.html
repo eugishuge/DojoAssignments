@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        {%if messages%}
+        {%for x in messages%}
+        <p>{{x}}</p>
+        {%endfor%}
+        {%endif%}
+
+        <form action="/jointeam2/create_team" method="post">
+            {%csrf_token%}
+            <p>Team Name:</p>
+            <input type="text" name="create_team">
+            <input type="submit" name="submit" value="Create">
+        </form>
+
+        <form action="/jointeam2/logout" method="post">
+            {%csrf_token%}
+        <input type="submit" name="submit" value="Log Out">
+        </form>
+<hr>
+<hr>
+        <form action="/jointeam2/go_back" method="post">
+            {%csrf_token%}
+        <input type="submit" name="submit" value="Go Back">
+        </form>
+
+    </body>
+</html>

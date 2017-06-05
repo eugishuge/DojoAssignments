@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        {%if messages%}
+        {%for x in messages%}
+        <p>{{x}}</p>
+        {%endfor%}
+        {%endif%}
+
+</div>
+        <fieldset style="width = 400px">
+            <form action="/login" method="post">
+                {%csrf_token%}
+
+                <h1>Login:</h1>
+                <p>Name:</p>
+                <p><input type="text" name="name"></p>
+                <p>Password:</p>
+                <p><input type="text" name="password"></p>
+                <input type="submit" name="submit" value="Login">
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <form action="/register" method="post">
+                {%csrf_token%}
+
+                <h1>New User? Register Here:</h1>
+                <p>Name:</p>
+                <p><input type="text" name="name"></p>
+                <p>Password:</p>
+                <p><input type="text" name="password"></p>
+                <p>Confirm password:</p>
+                <p><input type="text" name="confirm_pw"></p>
+                <input type="submit" name="submit" value="Register">
+            </form>
+        </fieldset>
+
+    </body>
+</html>

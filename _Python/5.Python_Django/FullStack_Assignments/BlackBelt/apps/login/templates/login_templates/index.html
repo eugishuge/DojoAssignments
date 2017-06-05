@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login and Registration</title>
+<style media="screen">
+    .container{
+        padding: 5px;
+        margin: 15px;
+        width: 400px;
+    }
+
+    input{
+        width: 175px;
+    }
+</style>
+    </head>
+    <body>
+
+        {%if messages%}
+        {%for x in messages%}
+        <p>{{x}}</p>
+        {%endfor%}
+        {%endif%}
+<div class="container">
+    <fieldset>
+        <form action="/login" method="post">
+            {%csrf_token%}
+
+            <h1>Login:</h1>
+
+            <p>UserName:</p>
+            <p><input type="text" name="username"></p>
+            <p>Password:</p>
+            <p><input type="text" name="password"></p>
+            <input type="submit" name="submit" value="Login">
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <form action="/register" method="post">
+            {%csrf_token%}
+
+            <h1>New User? Register Here:</h1>
+
+            <p>First Name:</p>
+            <p><input type="text" name="fname"></p>
+            <p>Last Name:</p>
+            <p><input type="text" name="lname"></p>
+            <p>UserName:</p>
+            <p><input type="text" name="username"></p>
+            <p>Password:</p>
+            <p><input type="text" name="password"></p>
+            <p>Confirm password:</p>
+            <p><input type="text" name="confirm_pw"></p>
+            <input type="submit" name="submit" value="Register">
+        </form>
+    </fieldset>
+
+</div>
+
+    </body>
+</html>

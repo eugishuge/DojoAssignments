@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+<h1>Travel Details</h1>
+{%for x in trip%}
+<p>Destination: {{x.destination}}</p>
+<p>Description: {{x.plan}}</p>
+<p>Travel Date From {{x.travel_start}}</p>
+<p>Travel Date To: {{x.travel_end}}</p>
+{%endfor%}
+
+<h1>Other Users on trip</h1>
+{%for x in other_trippers%}
+<p>{{x.all_users.username}}</p>
+{%endfor%}
+    </body>
+</html>

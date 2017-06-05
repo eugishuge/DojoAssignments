@@ -14,13 +14,13 @@ def create(request):
 
     return redirect ('/')
 
-def delete(request, id):
-
-    context = {
-    "delete" : Course.objects.filter(id = id)
-    }
-
-    return render(request, "courses_templates/delete.html", context)
+# def delete(request, id):
+#
+#     context = {
+#     "delete" : Course.objects.filter(id = id)
+#     }
+#
+#     return render(request, "courses_templates/delete.html", context)
 
 def remove (request,id):
     Course.objects.filter(id = id).delete()

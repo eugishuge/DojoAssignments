@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <h1>Player Information</h1>
+    {%for x in user%}
+    {{x.name}}
+    {%endfor%}
+
+    <h2>Teams Associated</h2>
+    {%for x in teams%}
+    <p>{{x.all_teams.team_name}}</p>
+    {%endfor%}
+
+    <form action="/jointeam2/logout" method="post">
+        {%csrf_token%}
+    <input type="submit" name="submit" value="Logout">
+    </form>
+<hr>
+<hr>
+    <form action="/jointeam2/go_back" method="post">
+        {%csrf_token%}
+    <input type="submit" name="submit" value="Go Back to Homepage">
+    </form>
+</body>
+
+
+</html>
