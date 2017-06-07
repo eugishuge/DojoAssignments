@@ -1,0 +1,8 @@
+*{
+    background-color: rgb(51,51,51);
+}
+img{
+    width: 350px;
+    height: 250px;
+    display: inline-block;
+}

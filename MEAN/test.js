@@ -1,47 +1,21 @@
-function Node (val){
-    this.head = val;
-    this.next = null;
-}
-Node.prototype.pass_this = function(custom_return){
-    console.log(this, "this");
-    console.log(this.self, "self");
-    console.log(custom_return, "My Return");
-    return custom_return;
-}
-
-var SLL = function(){
-    this.head = null;
-}
-SLL.prototype.add = function(val){
-    if(!this.head){
-        this.head - new Node(val);
-        return this;
-    }
-    var current = this.head;
-    while(current.next){
-        current = current.next
-    }
-    current.next = new Node(val);
-    return this;
-};
-SLL.prototype.dequeue = function (callback) {
-  var eliminatedNode = this.head;
-  this.head = this.head.next;
-  eliminatedNode.next = null;
-  if (typeof(callback)=='function'){
-    callback(eliminatedNode);
+function fib() {
+  // Some variables here
+  var prev = 0;
+  var curr = 1;
+  function nacci() {
+    // do something to those variables here
+    console.log(curr)
+    var temp = prev;
+    prev = curr;
+    curr = prev + temp;
   }
-  //console.log(this.head); optional
-  return this;
-};
+  return nacci
+}
+var fibCounter = fib();
 
-sList = new SLL();
-sList.add(1).add(2).add(3).add(4).head.next.passThis(sList).dequeue(
-  function callback(myNode){
-    console.log(myNode.val, "CHAINING INSANITY!");
-  })
-  .dequeue(
-    function anotherCallback(myNode){
-      console.log("******************************");
-      console.log('Seriously, Stop!', myNode);
-    });
+fibCounter() // should console.log "1"
+fibCounter() // should console.log "1"
+fibCounter() // should console.log "2"
+fibCounter() // should console.log "3"
+fibCounter() // should console.log "5"
+fibCounter() // should console.log "8"

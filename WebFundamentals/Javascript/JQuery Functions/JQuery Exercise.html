@@ -115,6 +115,11 @@
                 </div>
             </div>
 
+            $("#toggle").click(function(){
+                $(".block-toggle p").toggle();
+            });
+
+
             <div class="slideDown-slideUp">
                 <h1>slideUp / slideDown</h1>
                 <div class="slide-up">
@@ -197,6 +202,12 @@
                         <img src="burrito.jpeg" alt="burrito">
                     </div>
                 </div>
+
+                $("#attr").click(function(){
+                    $(".attribute img").attr('width', "500px", "height", "1000px");
+                    $(".attribute img").attr('height', "50px");
+                })
+
 
                 <div class="val">
                     <h1>Value</h1>
