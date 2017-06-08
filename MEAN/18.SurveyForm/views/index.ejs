@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Survey</title>
+        <style media="screen">
+            fieldset{
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DOJO INFO</h1>
+        <fieldset>
+            <form action="/results" method="post">
+                <p>Name: <input type="text" name="name" value=""></p>
+
+                <p>Dojo Location:
+                <select class="" name="location">
+                    <option value="Seattle">Seattle</option>
+                    <option value="Washington DC">Washington DC</option>
+                    <option value="Austin">Austin</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                </select></p>
+
+                <p>Favorite Language:
+                <select class="" name="language">
+                    <option value="HTML/CSS">HTML/CSS</option>
+                    <option value="Python/Django">Python/Django</option>
+                    <option value="MEAN">MEAN</option>
+                    <option value="Ruby on Rails">Ruby on Rails</option>
+                </select></p>
+
+                <p>Comments (optional)</p>
+                <textarea name="comment" rows="8" cols="80"></textarea>
+                <p><input type="submit" name="" value="Submit"></p>
+
+            </form>
+        </fieldset>
+    </body>
+</html>

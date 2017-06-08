@@ -7,23 +7,26 @@ var app = express();
 var bodyParser = require('body-parser');
 // use it!
 app.use(bodyParser.urlencoded({ extended: true }));
-// // static content
-// app.use(express.static(path.join(__dirname, "./static")));
+
 // // setting up ejs and our views folder
 app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs');
 // root route to render the index.ejs view
+
+
 app.get('/', function(req, res) {
+    console.log("it made it here_index")
  res.render("index");
 })
-// post route for adding a user
+
 app.post('/results', function(req, res) {
- console.log("POST DATA", req.body);
- // This is where we would add the user to the database
+    console.log(req.body)
  // Then redirect to the root route
- res.redirect('/');
+ res.render('results', {survey: req.body}); // THE {} IS PASSING IN THE OBJECT TO BE CALLED IN THE RESULTS PAGE, USING THE TEMPLATING LANGUAGE
 })
+
+
 // tell the express app to listen on port 8000
 app.listen(8000, function() {
- console.log("listening on port 8000");
+ console.log("listening on port 8000, BOYEE_survey");
 });
