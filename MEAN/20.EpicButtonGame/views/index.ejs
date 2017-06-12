@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+                    var socket = io.connect();
+
+                    $('#epic').click(function() {
+
+                        socket.emit('posting_push_count', {
+                            whatisthis: "GFY"
+                        });
+                        socket.on('send_counter', function(data) {
+                            $('#counter').html("the Button has been pushed " + JSON.stringify(data.response) + " times");
+                        });
+                    });
+
+                    $('#reset').click(function() {
+
+                        socket.emit('reset', {
+                            reset: 'BOYEEE'
+                        });
+                        socket.on('reset_now', function(data) {
+                            $('#counter').html("the Button has been reset. Count is now " + JSON.stringify(data.response));
+                        });
+                    });
+
+                    });
+    </script>
+</head>
+
+<body>
+    <fieldset style="width:250px; padding:20px">
+        <div id="counter"></div>
+
+        <button id='epic' type='button_epic' name='button'>Push the Epic Button</button>
+        <button id='reset' type='button_reset' name='button'>Reset Count</button>
+
+    </fieldset>
+</body>
+
+</html>
