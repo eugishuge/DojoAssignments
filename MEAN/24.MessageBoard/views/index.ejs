@@ -1,0 +1,31 @@
+<html>
+<body>
+    <h1>The Dojo Message Board</h1>
+
+    <form action="/messages" method = 'post'>
+    Name: <p><input type="text" name = "name" required></p>
+    Content: <p><textarea name="content" cols="30" rows="10" required></textarea></p>
+    <p><input type="submit" value='Post Message'></p>
+    </form>
+
+<hr>
+<% for (var i = 0; i<messages.length; i++){ %>
+    <h3>Name:  <%= messages[i].name %></h3>
+    <h4>Message: <p> <%= messages[i].content %></p></h4>
+
+    <% for (var x = 0; x < messages[i].comments_1.length; x++) { %>
+    <p>Name: <%= messages[i].comments_1[x].name %></p>
+    <p>Comment: <%= messages[i].comments_1[x].content %> </p>
+    <% } %>
+
+    <form action="messages/<%=messages[i]._id%>/comments" method = 'post'>
+    Name: <p><input type="text" name = "name" required></p>
+    Content: <p><input type="text" name='content'></p>
+    <p><input type="submit" value='Post Comment'></p>
+    </form>
+<hr>
+    <% } %>
+
+
+</body>
+</html>

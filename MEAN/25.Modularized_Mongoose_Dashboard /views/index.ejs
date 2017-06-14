@@ -1,0 +1,34 @@
+<html>
+    <body>
+
+        <form class="" action="/animal/:id">
+    <input type="submit", value = "See Animals">
+        </form>
+
+    <a href="/animal/new">ADD ANIMAL</a>
+
+
+<hr>
+ <%for (var i= 0; i<animals.length; i++){ %>
+<p>ID: <%= animals[i].id%></p>
+<p>Animal Name: <%= animals[i].name%></p>
+<p>Food: <%= animals[i].food%></p>
+<p>Size: <%= animals[i].size%></p>
+
+<form action="/animal/destroy/<%= animals[i].id %>" method = 'post'>
+<input type="submit" value="Delete" >
+
+</form>
+
+<!-- <p><a href="/animal/destroy/<%= animals[i].id %>" method='post'>Delete this Animal</a></p> -->
+
+<form action="/animal/edit/<%= animals[i].id %>">
+<input type="submit" value="Make Updates" >
+
+</form>
+<!-- <p><a href="/animal/edit/<%= animals[i].id %>">Make Updates</a></p> -->
+<hr>
+ <% } %>
+
+    </body>
+</html>

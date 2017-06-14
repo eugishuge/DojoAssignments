@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1>Make edits here! </h1>
+
+        <% for (var i=0; i<update.length; i++ ) { %>
+
+        <form action="/submit_edit/<%= update[i]._id %>" method='post'>
+
+            <p>id: <%= update[i].id %></p>
+            Name: <p><input type="text" name="name" value="<%= update[i].name%>"></p>
+            Food: <p><input type="text" name="food" value="<%= update[i].food%>"></p>
+            Size: <p><input type="text" name="size" value="<%= update[i].size%>"></p>
+            <p><input type="submit" value="Submit"></p>
+
+        <% } %>
+        </form>
+        <p><a href="/">Home</a></p>
+    </body>
+</html>
