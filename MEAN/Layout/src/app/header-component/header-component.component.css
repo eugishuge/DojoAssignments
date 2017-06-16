@@ -1,0 +1,11 @@
+.header{
+    outline: dotted red;
+    position: relative;
+    left: 40px;
+    margin: 5px;
+    text-align: center;
+    width: 1000px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: cyan;
+}

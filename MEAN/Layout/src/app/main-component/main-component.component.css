@@ -1,0 +1,12 @@
+.main{
+    outline: dotted red;
+    padding: 10px;
+    vertical-align: top;
+    position: relative;
+    left: 400px;
+    top: 40px;
+    width: 600px;
+    height: 500px;
+    background-color: cyan;
+    border: 1px solid black;
+}

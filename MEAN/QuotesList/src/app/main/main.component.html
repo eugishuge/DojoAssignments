@@ -1,0 +1,16 @@
+
+
+<fieldset *ngFor = 'let x of Show, let i = index'>
+    <h3>Quote: {{x.quotes}}</h3>
+    <h4>By: {{x.author}}</h4>
+    <h4>ID: {{i}}</h4>
+
+    <button (click)='voteUp(x, i)' style="background-color: green">Vote Up</button>
+
+    <button (click)='voteDown(x, i)'style="background-color: red">Vote Down</button>
+
+    <button (click)='delete(x, i)'>Delete</button>
+
+    <p>Total Votes: {{x.count}}</p>
+
+</fieldset>

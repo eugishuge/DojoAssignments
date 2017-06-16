@@ -1,0 +1,25 @@
+<!--The whole content below can be removed with the new code.-->
+
+    <h1>Welcome to {{title}}!!</h1>
+
+    <fieldset>
+    <legend>Quotes</legend>
+
+    <form (submit)='addQuote()'>
+    <h2>Add a Quote</h2>
+
+    <p><textarea required minlength='4' name="quotes" rows="8" cols="80" [(ngModel)]='quote.quotes' #quotes = 'ngModel'></textarea></p>
+    <div style='color:red' *ngIf = '!quotes.valid'>Please Enter a quote</div>
+
+
+    <h4>Author:</h4>
+    <p><input required minlength='1' type="text" name='author' [(ngModel)]='quote.author' #author='ngModel'></p>
+    <div style='color:red' *ngIf = '!author.valid'>Give the author credit!</div>
+    <input *ngIf = 'quotes.valid && author.valid' type="submit" value = "Add Quote">
+
+</form>
+{{quote | json}}
+
+</fieldset>
+
+<app-main [Show] = 'all'> </app-main>

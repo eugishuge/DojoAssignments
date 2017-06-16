@@ -1,0 +1,12 @@
+<fieldset>
+    <legend>Saiyan</legend>
+
+<p>
+  Power Level:
+  {{ (Power1 *100) }}
+
+</p>
+  <h4 *ngIf='Power1*100 >= 9000 && Power1*10 < 20000' > Over 9000! </h4>
+  <h4 *ngIf='Power1*100 >= 20000 && Power1*10 < 50000' > Superlative! </h4>
+  <h4 *ngIf='Power1*100 >= 50000' > The One! </h4>
+</fieldset>

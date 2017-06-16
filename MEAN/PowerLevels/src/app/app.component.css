@@ -1,0 +1,13 @@
+.container{
+    justify-content: center;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    margin-top:50px;
+    width: 1000px;
+    border: 1px solid black;
+
+}
+.box{
+    display: inline-block;
+}
