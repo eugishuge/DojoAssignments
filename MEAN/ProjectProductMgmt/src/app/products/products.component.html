@@ -1,0 +1,14 @@
+<fieldset>
+    <legend>{{title}}</legend>
+
+
+
+        <div *ngFor = "let x of all">
+        <p> {{x.product}} </p>
+        <p> {{x.price}} </p>
+        <p>{{x.img}}</p>
+        </div>
+
+        <p *ngIf = 'x.img'> {{x.img}} </p>
+
+</fieldset>

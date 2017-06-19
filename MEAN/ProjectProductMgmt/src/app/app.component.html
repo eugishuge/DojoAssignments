@@ -1,0 +1,17 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    {{title}}
+  </h1>
+ </div>
+
+<p>
+    <a [routerLink]="['/']">Home</a> |
+    <a [routerLink]="['/products']">Products</a> |
+    <a [routerLink]="['/edit', ':id']">Edit Products</a> |
+    <a [routerLink]="['/products','new']">Create new Product</a>
+</p>
+
+<hr>
+
+<router-outlet> </router-outlet>

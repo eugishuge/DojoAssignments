@@ -1,0 +1,13 @@
+<fieldset>
+    <legend>{{title}}</legend>
+    <form (submit)='onSubmit()'>
+
+        <p>Product Name: <input type="text" name= 'product' [(ngModel)]='product_.product' #product = 'ngModel'></p>
+
+        <p>Price: <input type="text" name= 'price' [(ngModel)]='product_.price' #price = 'ngModel'></p>
+
+        <p>Image: <input type="text" name = 'img' [(ngModel)]='product_.img' #img = 'ngModel'></p>
+
+        <input type="submit" value = "Create Product">
+
+    </form>
