@@ -1,0 +1,10 @@
+
+<form (submit)="edit()">
+
+
+ <p>Product Name: <input type="text" name="product" [(ngModel)] = "edit_prod.product" value = '{{edit_prod.product}}'></p>
+
+ <p>Price: <input type="text" name="price" [(ngModel)] = "edit_prod.price" value='{{edit_prod.price}}'></p>
+
+  <input type="submit" value="update">
+</form>

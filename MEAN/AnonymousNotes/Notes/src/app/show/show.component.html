@@ -1,0 +1,14 @@
+<form (submit) = 'Add()'>
+
+    <p>Enter Note: <input type="text" name='content' required minlength='3' [(ngModel)]= 'note.content'></p>
+
+    <p><input type="submit" value = 'submit'></p>
+
+</form>
+
+<div *ngFor = 'let note of notes'>
+
+<p>Note: {{note.content}}</p>
+
+<p>Time: {{note.createdAt}} </p>
+</div>

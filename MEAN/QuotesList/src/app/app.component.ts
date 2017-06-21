@@ -14,9 +14,9 @@ export class AppComponent {
   quote = new Quote();
 
   addQuote(){
-      console.log("added")
-      this.all.push(this.quote)
-      console.log(this.all)
+    //   console.log("added")
+      this.all.push(this.quote);
+    //   console.log(this.all)
       this.quote = new Quote()
   }
 

@@ -1,0 +1,28 @@
+
+<fieldset>
+    <legend>Player 1</legend>
+    <form [hidden]= 'users[0]' (submit) = 'onSubmit1()'>
+    Player 1: <input type="text" required name = 'player1' [(ngModel)] = 'user1.username'>
+        <input type="submit" value = 'Player 1'>
+    </form>
+</fieldset>
+
+<div *ngIf = 'users[0]'>
+<p>{{user1.username}}</p>
+</div>
+
+<fieldset>
+    <legend>Player 2</legend>
+    <form [hidden] = 'users[1]'(submit) = 'onSubmit2()'>
+        Player 2: <input type="text" required name = 'player2'[(ngModel)] = 'user2.username'>
+        <input type="submit" value = 'Player 2'>
+    </form>
+</fieldset>
+
+<div *ngIf = 'users[1]'>
+<p>{{user2.username}}</p>
+</div>
+
+<div *ngIf = 'users[0] && users[1]'>
+<button [routerLink]="['/battle']"> Lets Get Ready to Rumble!</button>
+</div>

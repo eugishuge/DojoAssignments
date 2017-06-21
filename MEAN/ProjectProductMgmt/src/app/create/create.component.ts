@@ -32,9 +32,9 @@ export class CreateComponent implements OnInit {
 
   onSubmit(){
       this.all.push(this.product_)
-      console.log(this.all)
+    //   console.log(this.all)
       this._productService.updateProducts(this.all)
-      console.log('hello')
+    //   console.log('hello')
       this.product_ = new Products();
       this._router.navigate(['/products'])
   }

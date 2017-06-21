@@ -1,3 +1,6 @@
 <p>
   edit works!
 </p>
+
+<div *ngFor = "let x of all, let i = index">
+<p>Product: <input type="text" placeholder = '{{x[i]}}' ></p>

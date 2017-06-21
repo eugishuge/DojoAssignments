@@ -1,14 +1,22 @@
 <fieldset>
     <legend>{{title}}</legend>
 
+    <div *ngFor = "let x of all, let i = index">
+<fieldset>
+    <p>Product: {{x.product}} </p>
+    <p> Price: ${{x.price}} </p>
+    <p>ID no. {{i}}</p>
+
+    <p *ngIf = 'x.img'>
+    <img src= '{{x.img}}' alt="barbell">
+    </p>
+
+<button [routerLink]="['/edit', i]"> Edit </button>
 
 
-        <div *ngFor = "let x of all">
-        <p> {{x.product}} </p>
-        <p> {{x.price}} </p>
-        <p>{{x.img}}</p>
-        </div>
+<button (click)='onDelete(i)'> Delete </button>
 
-        <p *ngIf = 'x.img'> {{x.img}} </p>
+</fieldset>
+</div>
 
 </fieldset>

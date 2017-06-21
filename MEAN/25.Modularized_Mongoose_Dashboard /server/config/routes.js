@@ -4,7 +4,7 @@ var animal_ = require('../controllers/methods.js')
 
 module.exports = function(app){
 
-    app.get('/', function(req, res){
+    app.get('/animal', function(req, res){
         animal_.show_all(req, res)
     })
     //DISPLAY FORM FOR MAKING A NEW ANIMAL (INDEX)

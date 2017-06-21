@@ -1,0 +1,9 @@
+<fieldset *ngFor="let product of all, let i = index">
+  <legend>Show All Products</legend>
+
+  <p>{{product.product}}</p>
+  <p>{{product.price}}</p>
+    <p>{{i}}</p>
+  <a [routerLink]="['/edit', i]">Edit</a>
+
+</fieldset>

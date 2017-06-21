@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Products } from '../products';
 import { ProductService } from '../product.service'
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -10,13 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./products.component.css']
 })
 export class ProductComponent implements OnInit {
-    title: "Show All Products"
+    title = "Show All Products";
     all: Array<Products>;
 
 
   constructor(
       private _productService: ProductService,
       private _router: Router,
+      private _ActivatedRoute:ActivatedRoute
   ) {
 _productService.productsObservable.subscribe((updatedProducts) =>
 {this.all = updatedProducts;
@@ -25,5 +26,14 @@ _productService.productsObservable.subscribe((updatedProducts) =>
    )}
 
   ngOnInit() {}
+
+  onDelete(i){
+      this.all.splice(i,1)
+  }
+
+  onEdit(i){
+    this._router.navigate(['/edit/i'])
+    console.log('edit function')
+  }
 
   }
