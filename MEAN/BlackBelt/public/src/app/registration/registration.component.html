@@ -1,0 +1,15 @@
+
+
+<fieldset>
+    <legend>Login</legend>
+        <form (submit) = 'Register()' #myForm = 'ngForm'>
+
+            <p>Name: <input type='text' name = 'fname' required [(ngModel)] = 'user.fname' #fname = "ngModel"></p>
+            <p>
+                <button type="submit" [disabled] = "!myForm.form.valid"> Login </button>
+            </p>
+
+        </form>
+</fieldset>
+
+<!-- <a [routerLink] = "['/login']"> Returning User? Login Here </a> -->
